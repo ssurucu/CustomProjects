@@ -1,4 +1,4 @@
-# CustomProjects
+# Producer-Consumer MultiProcesses Application
 
 This is an MultiProcess Application as it concludes producer and consumer processes. It is the 2nd project of the
 course named SWE573 - Software Development Practice in Software Engineering Ms / BOUN by Mehmet Ufuk Çağlayan.
