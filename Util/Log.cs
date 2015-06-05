@@ -11,8 +11,8 @@ namespace Util
     {
         //write to log file
         public static void SaveLog(string logText)
-        {           
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"d:\Work\P2-BPC\Util\bca-log.txt",true);
+        {
+            System.IO.StreamWriter file = new System.IO.StreamWriter(@"..\..\..\..\P2-BPC\Util\bca-log.txt", true);
             file.WriteLine(logText);
             file.Close();
 

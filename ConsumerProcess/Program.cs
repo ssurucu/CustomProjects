@@ -15,8 +15,6 @@ namespace ConsumerProcess
 {
     class Program
     {
-
-
         static void Main(string[] args)
         {
             int DemoTime = int.Parse(ConfigurationManager.AppSettings["DemoTime"]);
@@ -86,7 +84,7 @@ namespace ConsumerProcess
 
                 string response = reader.ReadLine();
                 byte[] data = Convert.FromBase64String(response);
-                
+
                 client.Close();
                 client.Dispose();
 
@@ -117,7 +115,7 @@ namespace ConsumerProcess
 
                 Thread.Sleep(rnd.Next(DelayMin, DelayMax));
                 short dataLength = BitConverter.ToInt16(data, 0);
-                
+
                 Console.WriteLine(Encoding.UTF8.GetString(data, 20, dataLength));
                 Console.WriteLine("Transaction consumed.");
                 Console.WriteLine("---------------------------------------");
