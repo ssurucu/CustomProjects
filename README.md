@@ -8,7 +8,7 @@ Background multiple process application is defined as one main process, a number
 and a number of consumer processes. Note that the term “process” stands for an operating system process 
 here, but not an operating system process thread.
 
-1. Main Process
+1.Main Process
 
 1.1. Opens/creates a shared log file in append mode 
 1.2. Reads a configuration file to retrieve application parameters
