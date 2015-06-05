@@ -17,7 +17,7 @@ the configuration file. Producer and consumer processes will have their own code
 1.4. Starts execution of all producer processes and all consumer processes, then waits on child exit for 
 all producer and consumer processes to terminate.
 
-2. Producer Processes
+2.Producer Processes
 
 2.1. Create a transaction and insert it in shared memory buffer, but wait if buffer is full.
 2.2. Transaction creation involves, generating a random transaction length (upper bound?), generating 
@@ -31,7 +31,7 @@ slowed down by using some random delay. Max delay is specified in the configurat
 2.4. Execute in a loop for a specified time, as specified in the configuration file,
 2.5. Log other significant events in a shared log file.
 
-3. Consumer Processes
+3.Consumer Processes
 
 3.1. Remove a transaction from shared memory buffer and process it, but wait if buffer is empty
 3.2. Processing the removed transaction means decrypting data in the transaction by using the key and 
@@ -43,7 +43,7 @@ down by using some random delay. Max delay is specified in the configuration fil
 3.4. Execute in a loop for a specified time, as specified in the configuration file,
 3.5. Log other significant events in a shared log file.
 
-4. Shared Memory Buffer and Transaction Format
+4.Shared Memory Buffer and Transaction Format
 
 4.1. Shared memory buffer is to be accessed in a mutually exclusive manner
 4.2. Shared memory buffer will have a capacity of at least 2000 transactions
@@ -53,7 +53,7 @@ bytes contain the 128 bit encryption/decryption key and next 8 or more bytes (in
 bytes) contain encrypted data.
 4.4. Transaction length and key fields contain random bit strings in this project.
 
-5. Logging
+5.Logging
 5.1. All critical actions of the main process and producer and consumer processes must be logged to 
 the file bca-log.txt, where log records are expected to be in date and time order.
 5.2. Log records are in the format yyyymmdd-hhmmss:sss dddd message
